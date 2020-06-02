@@ -29,6 +29,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +59,10 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Underline,
+	FontColor,
+	Highlight
 ];
 
 // Editor configuration.
@@ -64,22 +70,15 @@ ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
-			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
+			'underline',
+			'fontColor',
+			'highlight',
 			'indent',
 			'outdent',
-			'|',
-			'imageUpload',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
+			'bulletedList',
+			'numberedList'
 		]
 	},
 	image: {
